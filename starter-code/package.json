@@ -1,0 +1,16 @@
+{
+  "name": "class-07",
+  "version": "1.0.0",
+  "description": "Node.js and npm lab",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sara Jade & Aeone Singson",
+  "license": "MIT"
+}
