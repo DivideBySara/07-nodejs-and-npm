@@ -12,7 +12,14 @@ const express = require('express');
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 
-// TODO: Include all of the static resources as an argument to app.use()
+// DONE: Include all of the static resources as an argument to app.use()
+// est 10min act 10min
+const app = express();
+app.use(express.static('./public'));
+// ./public is already set as root directory
+app.get('.', function(request, response) {
+  response.sendFile('index.html', {root: './public'});
+});
 
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
 
@@ -26,5 +33,7 @@ app.post('/articles', bodyParser, function(request, response) {
 })
 
 app.listen(PORT, function() {
-  // TODO: Log to the console a message that lets you know which port your server has started on
+  // DONE: Log to the console a message that lets you know which port your server has started on
+  // est: 5min act: 10min
+  console.log(`App is listening on ${PORT}`);
 });
