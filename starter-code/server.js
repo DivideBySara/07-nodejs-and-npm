@@ -21,7 +21,11 @@ app.get('.', function(request, response) {
   response.sendFile('index.html', {root: './public'});
 });
 
-// TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
+// DONE: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
+// Estimated: 15 min | Actual 15 min
+app.get('/new', function(request, response){
+  response.sendFile('new.html', {root: './public'});
+});
 
 
 app.post('/articles', bodyParser, function(request, response) {
